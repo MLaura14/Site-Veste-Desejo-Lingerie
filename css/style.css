@@ -25,6 +25,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  flex-wrap: nowrap;
 }
 
 .nav-links {
@@ -135,14 +136,24 @@ body {
 /* RESPONSIVO */
 @media (max-width: 768px) {
   .nav-container {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
     gap: 10px;
   }
 
-  .logo img{
-    width: 90px;
+  .nav-links.left,
+  .nav-links.right {
+    display: flex;
   }
 
+  .logo img {
+    width: 70px; /* menor no mobile */
+  }
+}
   .hero {
     height: 32vh;
     min-height: 220px;
@@ -151,4 +162,3 @@ body {
   .carousel-track {
     width: 100%;
   }
-}

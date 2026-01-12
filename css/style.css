@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Petit Formal Script', cursive;
+  background: #f5f1e1;
+  color: #960b0c;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #960b0c;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+ text-decoration: none;
+ color: #f5f1e1;
+  
+}
+
+.logo img {
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* HERO */
+.hero {
+  margin-top: 80px;
+  height: 60vh;
+  min-height: 260px;
+  max-height: 420px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slide1 {
+  background-image: url("../img/Banner\ Veste\ Desejo.png");
+}
+
+.slide2 {
+  background-image: url("../img/Banner\ Veste\ Desejo\ \(1\).png");
+}
+
+.slide3 {
+  background-image: url("../img/Banner\ Veste\ Desejo\ \(2\).png");
+}
+
+.hero-slide.active {
+  opacity: 1;
+}
+
+/* CATÁLOGO */
+.catalogo {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.carousel-track {
+  display: flex;
+  overflow: hidden;
+  width: 80%;
+}
+
+.card {
+  min-width: 200px;
+  margin: 10px;
+  padding: 40px 20px;
+  background: #f5f1e1;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+/* SOBRE */
+.sobre {
+  padding: 60px 20px;
+  background: #c52a2f;
+  text-align: center;
+  color: #f5f1e1;
+}
+
+/* FOOTER */
+.footer {
+  background: #960b0c;
+  padding: 30px 20px;
+  text-align: center;
+  color: #f5f1e1;
+}
+
+.footer svg {
+  width: 100px;
+  fill: #f5f1e1;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .logo img{
+    width: 90px;
+  }
+
+  .hero {
+    height: 32vh;
+    min-height: 220px;
+  }
+
+  .carousel-track {
+    width: 100%;
+  }
+}

@@ -9,7 +9,6 @@ body {
   font-family: 'Petit Formal Script', cursive;
   background: #f5f1e1;
   color: #960b0c;
-  padding-top: -230px;
 }
 
 /* NAVBAR */
@@ -52,6 +51,7 @@ body {
   width: 100%;
   position: relative;
   aspect-ratio: 16 / 9;
+  max-height: 420px
 }
 
 .hero-slide {
@@ -152,6 +152,7 @@ body {
 }
   .hero {
      aspect-ratio: 4 / 5;
+     max-height: 325px;
   }
 
   .carousel-track {

@@ -49,21 +49,17 @@ body {
 /* HERO */
 .hero {
   margin-top: 80px;
-  height: 60vh;
-  min-height: 260px;
-  max-height: 420px;
+  width: 100%;
   position: relative;
-  overflow: hidden;
+  aspect-ratio: 16 / 9;
 }
 
 .hero-slide {
   position: absolute;
   inset: 0;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   opacity: 0;
   transition: opacity 1s ease;
 }
@@ -155,8 +151,7 @@ body {
   }
 }
   .hero {
-    height: 32vh;
-    min-height: 220px;
+     aspect-ratio: 4 / 5;
   }
 
   .carousel-track {

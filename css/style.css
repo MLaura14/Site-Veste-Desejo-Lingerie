@@ -68,25 +68,20 @@ body {
   transition: opacity 1s ease;
 }
 
+.slide1 {
+  background-image: url("../img/Banner\ Veste\ Desejo.png");
+}
+
+.slide2 {
+  background-image: url("../img/Banner\ Veste\ Desejo\ \(1\).png");
+}
+
+.slide3 {
+  background-image: url("../img/Banner\ Veste\ Desejo\ \(2\).png");
+}
+
 .hero-slide.active {
   opacity: 1;
-}
-
-/* IMAGENS */
-.hero-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* MOBILE FIRST */
-.desktop {
-  display: none;
-}
-
-.mobile {
-  display: block;
 }
 
 /* CATÁLOGO */
@@ -167,12 +162,3 @@ body {
   .carousel-track {
     width: 100%;
   }
-
-  .desktop {
-    display: block;
-  }
-
-  .mobile {
-    display: none;
-  }
-

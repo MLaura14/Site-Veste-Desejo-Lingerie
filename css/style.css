@@ -9,6 +9,7 @@ body {
   font-family: 'Petit Formal Script', cursive;
   background: #f5f1e1;
   color: #960b0c;
+  padding-top: -230px;
 }
 
 /* NAVBAR */
@@ -48,7 +49,6 @@ body {
 
 /* HERO */
 .hero {
-  margin-top: 80px;
   width: 100%;
   position: relative;
   aspect-ratio: 16 / 9;

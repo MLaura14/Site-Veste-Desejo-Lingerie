@@ -11,18 +11,11 @@ setInterval(() => {
 }, 4000);
 
 // CARROSSEL
-const track = document.querySelector(".carousel-track");
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
+const cards = document.querySelectorAll('.lingerie-card');
 
-let position = 0;
-
-next.addEventListener("click", () => {
-  position -= 220;
-  track.style.transform = `translateX(${position}px)`;
-});
-
-prev.addEventListener("click", () => {
-  position += 220;
-  track.style.transform = `translateX(${position}px)`;
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    cards.forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+  });
 });

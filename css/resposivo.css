@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links.left,
+  .nav-links.right {
+    display: flex;
+  }
+
+  .logo img {
+    width: 70px; /* menor no mobile */
+  }
+}
+  .hero {
+     aspect-ratio: 4 / 5;
+     max-height: 325px;
+  }
+
+  .carousel-track {
+    width: 100%;
+  }

@@ -1,0 +1,11 @@
+.footer {
+  background: #960b0c;
+  padding: 30px 20px;
+  text-align: center;
+  color: #f5f1e1;
+}
+
+.footer svg {
+  width: 100px;
+  fill: #f5f1e1;
+}

@@ -1,0 +1,33 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #960b0c;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: nowrap;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-links a {
+ text-decoration: none;
+ color: #f5f1e1;
+  
+}
+
+.logo img {
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+}

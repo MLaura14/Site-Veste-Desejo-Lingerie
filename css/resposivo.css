@@ -15,14 +15,14 @@
   }
 
   .logo img {
-    width: 70px; /* menor no mobile */
-  }
-}
-  .hero {
-     aspect-ratio: 4 / 5;
-     max-height: 325px;
+    width: 70px;
   }
 
-  .carousel-track {
-    width: 100%;
+  /* BANNER MOBILE */
+  .hero {
+    aspect-ratio: 4 / 5;
+    max-height: 325px;
   }
+}
+
+

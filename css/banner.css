@@ -1,32 +1,28 @@
+/* ===== HERO / BANNER ===== */
 .hero {
   width: 100%;
   position: relative;
-  aspect-ratio: 16 / 9;
-  max-height: 420px
+  overflow: hidden;
+  margin-bottom: 0;
 }
 
+/* slides */
 .hero-slide {
   position: absolute;
   inset: 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
   opacity: 0;
   transition: opacity 1s ease;
 }
 
-.slide1 {
-  background-image: url("../img/Banner\ Veste\ Desejo.png");
-}
-
-.slide2 {
-  background-image: url("../img/Banner\ Veste\ Desejo\ \(1\).png");
-}
-
-.slide3 {
-  background-image: url("../img/Banner\ Veste\ Desejo\ \(2\).png");
-}
-
+/* slide ativo aparece e define a altura */
 .hero-slide.active {
+  position: relative;
   opacity: 1;
+}
+
+/* imagem manda na altura */
+.hero-slide img {
+  width: 100%;
+  height: auto;
+  display: block; /* REMOVE espaço fantasma */
 }

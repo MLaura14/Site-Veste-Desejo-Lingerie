@@ -1,9 +1,22 @@
+/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   background: #960b0c;
   z-index: 1000;
+  animation: navFadeDown 1s ease-out;
+}
+
+@keyframes navFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav-container {
@@ -21,13 +34,70 @@
 }
 
 .nav-links a {
- text-decoration: none;
- color: #f5f1e1;
-  
+  text-decoration: none;
+  color: #f5f1e1;
+  position: relative;
+  padding: 6px 16px;
+  border-radius: 999px;
+  z-index: 1;
+  white-space: nowrap; /* 🔑 impede quebra feia */
 }
 
+/* MOLDURA DESENHADA */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 2px solid #f5f1e1;
+  transform: scaleX(0);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a:active::after,
+.nav-links a:focus::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* LOGO */
 .logo img {
   width: 120px;
   max-width: 100%;
   height: auto;
+  border-radius: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.logo img:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.7);
+}
+
+.logo img:active {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.8);
+}
+
+/* ===== RESPONSIVO (IGUAL AO ANTIGO, AJUSTADO) ===== */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    padding: 4px 10px; /* 🔑 AQUI resolve tudo */
+  }
+
+  .logo img {
+    width: 70px;
+  }
 }

@@ -9,4 +9,5 @@ body {
   font-family: 'Petit Formal Script', cursive;
   background: #f5f1e1;
   color: #960b0c;
+  padding-top: var(--nav-height);
 }

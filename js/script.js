@@ -19,3 +19,17 @@ cards.forEach(card => {
     card.classList.add('active');
   });
 });
+
+//NAVBAR//
+
+const nav = document.querySelector('.navbar');
+
+  function ajustarNavbar() {
+    document.documentElement.style.setProperty(
+      '--nav-height',
+      `${nav.offsetHeight}px`
+    );
+  }
+
+  ajustarNavbar();
+  window.addEventListener('resize', ajustarNavbar);

@@ -1,0 +1,231 @@
+/* ===== CONTATO HERO ===== */
+.contato-hero {
+  position: relative;
+  padding: 100px 20px;
+  background: linear-gradient(
+    to bottom,
+    #eee7cb,
+    #f5f1e1,
+    #f5f1e1
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* leve textura visual */
+.contato-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top, rgba(150, 11, 12, 0.08), transparent 60%),
+    radial-gradient(circle at bottom, rgba(150, 11, 12, 0.05), transparent 65%);
+  pointer-events: none;
+}
+
+/* ===== TEXTO ===== */
+.texto-intro {
+  max-width: 700px;
+  position: relative;
+  z-index: 2;
+}
+
+.texto-intro h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #960b0c;
+}
+
+.texto-intro p {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #6d0a0a;
+}
+
+/* ===== ANIMAÇÃO SUAVE ===== */
+.fade-item {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== BOX DAS FRASES ===== */
+.frases-box {
+  margin: 40px auto 20px;
+  padding: 35px 30px;
+  max-width: 520px;
+
+  background: #f5f1e1;
+  border: 2px solid #ce3e3e;
+  border-radius: 28px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+/* quando entra em cena */
+.frases-box.ativo {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== FRASES ===== */
+.frase-item {
+  font-size: 1.05rem;
+  color: #6d0a0a;
+  opacity: 0;
+  position: relative;
+  cursor: pointer;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+/* brilho */
+.frase-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 0.5s ease;
+  pointer-events: none;
+}
+
+/* hover só nas frases pequenas */
+.frase-item:not(.destaque):hover::after {
+  opacity: 1;
+  transform: translateX(100%);
+}
+
+.frase-item:not(.destaque):hover {
+  color: #960b0c;
+}
+
+/* frase principal */
+.frase-item.destaque {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  color: #960b0c;
+  position: relative;
+  padding: 10px 22px;
+  border-radius: 999px;
+  z-index: 1;
+}
+
+/* moldura desenhada */
+.frase-item.destaque::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 2px solid #ce3e3e;
+  transform: scaleX(0);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.25s ease;
+}
+
+/* hover */
+.frase-item.destaque:hover::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* frase final mais suave */
+.frase-item.leve {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* animação em cascata */
+.frases-box.ativo .frase-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.frases-box.ativo .frase-item:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.frases-box.ativo .frase-item:nth-child(2) {
+  transition-delay: 0.45s;
+}
+.frases-box.ativo .frase-item:nth-child(3) {
+  transition-delay: 0.7s;
+}
+
+/* ===== BOTÕES ===== */
+.contato-botoes {
+  margin-top: 35px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.contato-botoes a {
+  text-decoration: none;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+/* WhatsApp */
+.zap-btn {
+  background: #960b0c;
+  color: #f5f1e1;
+  box-shadow: 0 8px 18px rgba(150, 11, 12, 0.35);
+}
+
+.zap-btn:hover {
+  background: transparent;
+  color: #960b0c;
+  border-color: #960b0c;
+  transform: translateY(-3px);
+}
+
+/* Instagram */
+.insta-btn {
+  background: #ce3e3e;
+  color: #f5f1e1;
+  box-shadow: 0 8px 18px rgba(206, 62, 62, 0.35);
+}
+
+.insta-btn:hover {
+  background: transparent;
+  color: #ce3e3e;
+  border: 2px solid #ce3e3e;
+  transform: translateY(-3px);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .texto-intro h1 {
+    font-size: 2.2rem;
+  }
+
+  .texto-intro p {
+    font-size: 1rem;
+  }
+}

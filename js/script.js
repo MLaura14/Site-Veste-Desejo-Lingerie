@@ -33,3 +33,19 @@ const nav = document.querySelector('.navbar');
 
   ajustarNavbar();
   window.addEventListener('resize', ajustarNavbar);
+
+  //FRASES HOME//
+  const frasesBox = document.querySelector('.frases-box');
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        frasesBox.classList.add('ativo');
+      }
+    });
+  },
+  { threshold: 0.4 }
+);
+
+observer.observe(frasesBox);
